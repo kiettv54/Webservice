@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSinhVienInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSinhVienInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSinhVienInfoResult" type="tns:ArrayOfSinhVienLop" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSinhVienLop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVienLop" nillable="true" type="tns:SinhVienLop" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVienLop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="HoTen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenLop" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSinhVienByGT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gioitinh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSinhVienByGTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSinhVienByGTResult" type="tns:ArrayOfSinhVienByGT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSinhVienByGT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVienByGT" nillable="true" type="tns:SinhVienByGT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVienByGT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenLop" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Siso" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSinhVienBySiso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="siso" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSinhVienBySisoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSinhVienBySisoResult" type="tns:ArrayOfSinhvienSortedBySiso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSinhvienSortedBySiso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhvienSortedBySiso" nillable="true" type="tns:SinhvienSortedBySiso" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhvienSortedBySiso">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaSV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoTen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GioiTinh" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSinhVienBySisoAndTinh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="siso" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tinh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSinhVienBySisoAndTinhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSinhVienBySisoAndTinhResult" type="tns:ArrayOfSinhVienLop2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSinhVienLop2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVienLop2" nillable="true" type="tns:SinhVienLop2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVienLop2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaSV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hoten" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaLop" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenLop" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSinhVienBySisoOrGT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="siso" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="gioitinh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSinhVienBySisoOrGTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSinhVienBySisoOrGTResult" type="tns:ArrayOfSinhVienLop2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SortedLopBySiso">
+        <s:complexType />
+      </s:element>
+      <s:element name="SortedLopBySisoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SortedLopBySisoResult" type="tns:ArrayOfLop" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Lop" nillable="true" type="tns:Lop" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Lop">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaLop" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenLop" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Siso" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SortedSinhVienByNameAndGT">
+        <s:complexType />
+      </s:element>
+      <s:element name="SortedSinhVienByNameAndGTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SortedSinhVienByNameAndGTResult" type="tns:ArrayOfSinhVien" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSinhVien">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SinhVien" nillable="true" type="tns:SinhVien" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SinhVien">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MaSV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GioiTinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoTen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Diachi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaLop" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lop" type="tns:Lop" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSinhVienInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSinhVienInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSinhVienInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienByGTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSinhVienByGT" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienByGTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSinhVienByGTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySiso" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoAndTinhSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySisoAndTinh" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoAndTinhSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySisoAndTinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoOrGTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySisoOrGT" />
+  </wsdl:message>
+  <wsdl:message name="GetSinhVienBySisoOrGTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSinhVienBySisoOrGTResponse" />
+  </wsdl:message>
+  <wsdl:message name="SortedLopBySisoSoapIn">
+    <wsdl:part name="parameters" element="tns:SortedLopBySiso" />
+  </wsdl:message>
+  <wsdl:message name="SortedLopBySisoSoapOut">
+    <wsdl:part name="parameters" element="tns:SortedLopBySisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SortedSinhVienByNameAndGTSoapIn">
+    <wsdl:part name="parameters" element="tns:SortedSinhVienByNameAndGT" />
+  </wsdl:message>
+  <wsdl:message name="SortedSinhVienByNameAndGTSoapOut">
+    <wsdl:part name="parameters" element="tns:SortedSinhVienByNameAndGTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetSinhVienInfo">
+      <wsdl:input message="tns:GetSinhVienInfoSoapIn" />
+      <wsdl:output message="tns:GetSinhVienInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienByGT">
+      <wsdl:input message="tns:GetSinhVienByGTSoapIn" />
+      <wsdl:output message="tns:GetSinhVienByGTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySiso">
+      <wsdl:input message="tns:GetSinhVienBySisoSoapIn" />
+      <wsdl:output message="tns:GetSinhVienBySisoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoAndTinh">
+      <wsdl:input message="tns:GetSinhVienBySisoAndTinhSoapIn" />
+      <wsdl:output message="tns:GetSinhVienBySisoAndTinhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoOrGT">
+      <wsdl:input message="tns:GetSinhVienBySisoOrGTSoapIn" />
+      <wsdl:output message="tns:GetSinhVienBySisoOrGTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SortedLopBySiso">
+      <wsdl:input message="tns:SortedLopBySisoSoapIn" />
+      <wsdl:output message="tns:SortedLopBySisoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SortedSinhVienByNameAndGT">
+      <wsdl:input message="tns:SortedSinhVienByNameAndGTSoapIn" />
+      <wsdl:output message="tns:SortedSinhVienByNameAndGTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSinhVienInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSinhVienInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienByGT">
+      <soap:operation soapAction="http://tempuri.org/GetSinhVienByGT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySiso">
+      <soap:operation soapAction="http://tempuri.org/GetSinhVienBySiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoAndTinh">
+      <soap:operation soapAction="http://tempuri.org/GetSinhVienBySisoAndTinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoOrGT">
+      <soap:operation soapAction="http://tempuri.org/GetSinhVienBySisoOrGT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedLopBySiso">
+      <soap:operation soapAction="http://tempuri.org/SortedLopBySiso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedSinhVienByNameAndGT">
+      <soap:operation soapAction="http://tempuri.org/SortedSinhVienByNameAndGT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSinhVienInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSinhVienInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienByGT">
+      <soap12:operation soapAction="http://tempuri.org/GetSinhVienByGT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySiso">
+      <soap12:operation soapAction="http://tempuri.org/GetSinhVienBySiso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoAndTinh">
+      <soap12:operation soapAction="http://tempuri.org/GetSinhVienBySisoAndTinh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSinhVienBySisoOrGT">
+      <soap12:operation soapAction="http://tempuri.org/GetSinhVienBySisoOrGT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedLopBySiso">
+      <soap12:operation soapAction="http://tempuri.org/SortedLopBySiso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedSinhVienByNameAndGT">
+      <soap12:operation soapAction="http://tempuri.org/SortedSinhVienByNameAndGT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:50638/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:50638/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

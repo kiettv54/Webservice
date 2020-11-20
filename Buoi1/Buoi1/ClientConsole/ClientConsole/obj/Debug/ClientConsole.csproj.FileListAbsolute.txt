@@ -1,0 +1,6 @@
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\bin\Debug\ClientConsole.exe.config
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\bin\Debug\ClientConsole.exe
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\bin\Debug\ClientConsole.pdb
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\obj\Debug\ClientConsole.csprojResolveAssemblyReference.cache
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\obj\Debug\ClientConsole.exe
+D:\da17tt\webnangcao\Buoi1\ClientConsole\ClientConsole\obj\Debug\ClientConsole.pdb

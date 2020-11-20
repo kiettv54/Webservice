@@ -1,0 +1,9 @@
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\bin\Debug\ClientWinform.exe.config
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\bin\Debug\ClientWinform.exe
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\bin\Debug\ClientWinform.pdb
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.csprojResolveAssemblyReference.cache
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.Form1.resources
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.Properties.Resources.resources
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.csproj.GenerateResource.Cache
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.exe
+D:\da17tt\webnangcao\Buoi1\ClientWinform\ClientWinform\obj\Debug\ClientWinform.pdb
